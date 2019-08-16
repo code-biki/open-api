@@ -749,6 +749,8 @@ sign      | true  | string | 签名                             |
 symbol    | true  | string | 币对                             |
 time      | true  | string | 时间戳                            |
 
+> 没有开始时间，结束时间时，默认返回最近10分钟的全部委托单数据
+
 #### 返回参数:
 
 参数名称          | 数据类型   | 描述
