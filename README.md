@@ -739,10 +739,10 @@ api_keyd7e4d03168ac95fca79ffd60a9dc3632symbolbtcusdttime1564132947
 #### 输入参数:
 
 参数名称      | 是否必须  | 数据类型   | 描述                             | 取值范围
---------- | ----- | ------ | ------------------------------ | ------------------------------------
+--------- | ----- | ------ | ------------------------------ | ----------------------------
 api_key   | true  | string | 用户 api_key                     |
 startDate | false | string | 开始时间,精确到秒"yyyy-MM-dd mm:hh:ss" |
-endDate   | false | string | 结束时间,精确到秒"yyyy-MM-dd mm:hh:ss" | 需与startDate相距10分钟以内，否则不返回委托数据并且报参数错误
+endDate   | false | string | 结束时间,精确到秒"yyyy-MM-dd mm:hh:ss" | 需与startDate相距10分钟以内，否则返回错误码1
 pageSize  | false | string | 每页数据数                          |
 page      | false | string | 页码                             |
 sign      | true  | string | 签名                             |
