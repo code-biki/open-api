@@ -181,8 +181,8 @@ API                                                                | Interface T
 [GET /open/api/v2/all_order](#Get-All-Orders)                      | Private interface | V         | 10 times/sec    | Get All Orders
 [GET /open/api/all_trade](#Get-Recent-Trades)                      | Private interface | V         | 10 times/sec    | Get Recent Trades
 [GET /open/api/order_info](#Get-Order-Details)                     | Private interface | V         | 10 times/sec    | Get Order Details
-[POST /open/api/create_order](#Creating Order)                     | Private interface | V         | 100 times/10sec | Creating Order
-[POST /open/api/cancel_order](#Cancel Order)                       | Private interface | V         | 100 times/10sec | Cancel Order
+[POST /open/api/create_order](#Creating-Order)                     | Private interface | V         | 100 times/10sec | Creating Order
+[POST /open/api/cancel_order](#Cancel-Order)                       | Private interface | V         | 100 times/10sec | Cancel Order
 [POST /open/api/cancel_order_all](#Cancel-All-Orders)              | Private interface | V         | 100 times/10sec | Cancel All Orders
 [POST /open/api/mass_replaceV2](#Batch-creating-and-cancel-orders) | Private interface | V         | 100 times/10sec | Batch creating & cancel orders
 
