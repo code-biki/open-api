@@ -381,7 +381,7 @@ rose   | string | 当日 涨跌幅度
 
 ### 获取行情成交记录
 
-#### GET [/open/api/get_records](https://openapi.biki.com/open/api/get_trades?symbol=btcusdt)
+#### GET [/open/api/get_trades](https://openapi.biki.com/open/api/get_trades?symbol=btcusdt)
 
 #### 输入参数:
 
@@ -395,22 +395,6 @@ symbol | true | string | 交易对 | btcusdt, ltcusdt, ethusdt ...
 ---- | ------ | ---------------------
 code | string | code=0 成功， code >0 失败
 data | object | 交易记录
-
-##### data说明:
-
-```python
-"data": [
-  [
-    1558586460,   // K线开盘时间戳
-    7654.7866,    // 开盘价
-    7654.7866,    // 最高
-    7654.0322,    // 最低
-    7654.0322,    // 收盘价
-    26.9234       // 成交量
-  ],
-  ...
-]
-```
 
 #### 返回示例:
 
@@ -427,24 +411,7 @@ data | object | 交易记录
             "ts":1553690617000            // 成交时间戳
             "ds":2019-3-27 20:43:37       // 成交时间格式化显示
         },
-        {
-            "amount": 16.45,
-            "price": 0.18335468,
-            "id": 447120,
-            "type": "buy"
-        },
-        {
-            "amount": 2,
-            "price": 0.18335468,
-            "id": 447119,
-            "type": "buy"
-        },
-        {
-            "amount": 2.92,
-            "price": 0.183324003,
-            "id": 447118,
-            "type": "sell"
-        }
+        ...
     ]
 }
 ```
