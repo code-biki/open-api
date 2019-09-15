@@ -1182,7 +1182,7 @@ sign        | true      | string    | Signature
 }
 ```
 
-### Subscribe for Klines Dat
+### Subscribe for Klines Date
 
 #### Send a subscription message upon successful connection:
 
