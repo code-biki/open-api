@@ -157,7 +157,7 @@ API requests may likely be altered during network transmission and to ensure API
 
 - All the letters used in the string for signing shall be in lowercase
 
-  - sign = 3cdbe8034f7abf2820fc1bbe721e5692
+  - sign = 5fcf02e226a4bb2fb180be2aaa6fe541
 
 **4\. Add the final string for signing to the path of the API request**
 
