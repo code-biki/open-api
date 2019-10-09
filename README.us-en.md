@@ -163,7 +163,7 @@ API requests may likely be altered during network transmission and to ensure API
 
 - The final API request to be sent to the Server will be:
 
-  - <https://openapi.biki.com/open/api/user/account?api_key=0816016bb06417f50327e2b557d39aaa&time=156200607&sign=3cdbe8034f7abf2820fc1bbe721e5692>
+  - <https://openapi.biki.com/open/api/user/account?api_key=0816016bb06417f50327e2b557d39aaa&time=156200607&sign=5fcf02e226a4bb2fb180be2aaa6fe541>
 
 ### List of REST API
 

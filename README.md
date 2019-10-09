@@ -171,7 +171,7 @@ API 请求在通过网络传输的过程中极有可能被篡改，为了确保�
 
 - 最终发送到服务器的请求地址为:
 
-  - <https://openapi.biki.com/open/api/user/account?api_key=0816016bb06417f50327e2b557d39aaa&time=156200607&sign=3cdbe8034f7abf2820fc1bbe721e5692>
+  - <https://openapi.biki.com/open/api/user/account?api_key=0816016bb06417f50327e2b557d39aaa&time=156200607&sign=5fcf02e226a4bb2fb180be2aaa6fe541>
 
 ### REST API列表
 
