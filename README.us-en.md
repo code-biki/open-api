@@ -65,10 +65,6 @@ After the user register an account on **[BiKi](https://www.biki.com)**，they ha
 
 BiKi.com server is based in Tokyo and to minimize delays on API access, we recommend using compatible servers that can communicate smoothly with our servers in Tokyo.
 
-### Contact Us
-
-In case if any need for assistance, please add WeChat ID: biki_helper with a remark in this format: API + BiKi account UID + Programming Language, so that our Customer Service Officer can invite you to join our API Support Group.
-
 <br>
 
 ## REST API
