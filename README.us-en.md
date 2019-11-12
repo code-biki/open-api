@@ -27,7 +27,7 @@ English | [简体中文](./README.md)
   - [**Get Recent Trades**](#Get-Recent-Trades)
   - [**Get Order Details**](#Get-Order-Details)
   - [**Creating Order**](#Creating-Order)
-  - [**Cancel an Order**](#Cancel-an-Order)
+  - [**Cancel an Order**](#Cancel-Order)
   - [**Cancel All Orders**](#Cancel-All-Orders)
   - [**Batch creating & cancel orders**](#Batch-creating-and-cancel-orders)
 
