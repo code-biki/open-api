@@ -67,13 +67,13 @@ BiKi.com server is based in Tokyo and to minimize delays on API access, we recom
 
 <br>
 
-## REST API
+## Spot REST API
 
 ### URL Access
 
 - **[https://openapi.biki.com](https://www.biki.com) [Recommend]**
 
-- **[https://openapi.bikicoin.pro](https://www.bikicoin.pro)**
+- **[https://openapi.biki.cc](https://www.biki.cc)**
 
 ### Request
 
@@ -161,7 +161,7 @@ API requests may likely be altered during network transmission and to ensure API
 
   - <https://openapi.biki.com/open/api/user/account?api_key=0816016bb06417f50327e2b557d39aaa&time=156200607&sign=5fcf02e226a4bb2fb180be2aaa6fe541>
 
-### List of REST API
+### List of Spot REST API
 
 API                                                                | Interface Type    | Signature | Frequency Limit | Description
 ------------------------------------------------------------------ | ----------------- | --------- | --------------- | ------------------------------
@@ -182,7 +182,7 @@ API                                                                | Interface T
 [POST /open/api/cancel_order_all](#Cancel-All-Orders)              | Private interface | V         | 100 times/10sec | Cancel All Orders
 [POST /open/api/mass_replaceV2](#Batch-creating-and-cancel-orders) | Private interface | V         | 100 times/10sec | Batch creating & cancel orders
 
-### Get Symbols List
+### Get Spot Symbols List
 
 #### GET [/open/api/common/symbols](https://openapi.biki.com/open/api/common/symbols)
 
@@ -225,7 +225,7 @@ price_precision  | number   | Price precision (0 is a number)
 }
 ```
 
-### Get All Tickers
+### Get All Spot Tickers
 
 #### GET [/open/api/get_allticker](https://openapi.biki.com/open/api/get_allticker)
 
@@ -1042,7 +1042,7 @@ sign        | true      | string    | Signature
 
 <br>
 
-## Websocket API
+## Spot Websocket API
 
 ### URL Access URL
 
@@ -1220,6 +1220,189 @@ sign        | true      | string    | Signature
         "close": 1221.11,
         "high": 22322.22,
         "low": 2321.22
+    }
+}
+```
+
+## Contract REST API
+
+### URL Access
+
+- **<https://coapi.biki.com> [Recommend]**
+
+- **<https://coapi.biki.cc>**
+
+### Get Contract List
+
+#### GET [/swap/instruments](https://coapi.biki.com/swap/instruments)
+
+#### Entry Parameters: No
+
+#### Return Parameters:
+
+Parameters    | Data Typ | Description
+------------- | -------- | ------------------------------
+errno         | string   |
+message       | string   |
+instrument_id | number   | instrument id
+symbol        | string   | symbol
+face_value    | string   | face value Exp. 0.0001BTC/Unit
+min_leverage  | string   | min leverage
+max_leverage  | string   | max leverage
+px_unit       | string   | price unit
+qty_unit      | string   | quantity unit
+
+#### Return to example::
+
+```python
+{
+    "errno": "OK",
+    "message": "Success",
+    "data": {
+        "instruments": [
+            {
+                "instrument_id": 1,
+                "index_id": 1,
+                "symbol": "BTCUSDT",
+                "name_zh": "BTCUSDT永续合约",
+                "name_en": "BTCUSDT Swap",
+                "base_coin": "BTC",
+                "quote_coin": "USDT",
+                "margin_coin": "USDT",
+                "face_value": "0.0001",
+                "min_leverage": "1",
+                "max_leverage": "125",
+                "default_leverage": "0",
+                "px_unit": "0.01",
+                "qty_unit": "1",
+                "value_unit": "0.0001",
+                "min_qty": "1",
+                "max_qty": "1000000",
+                "maker_fee_ratio": "-0.0004",
+                "taker_fee_ratio": "0.0006"
+            },
+            ...
+        ]
+    }
+}
+```
+
+### Get All Tickers
+
+#### GET [/swap/tickers](https://coapi.biki.cc/swap/tickers)
+
+#### Entry Parameters: No
+
+#### Return Parameters:
+
+Parameters        | Data Type | Description
+----------------- | --------- | ------------------------------------------------------------
+instrument_id     | string    | instrument_id
+symbol            | string    | symbol
+last_px           | string    | last price
+open              | string    | open price
+high              | string    | Highest price
+close             | string    | close price
+low               | string    | 24H Low
+change_value      | string    | change_value
+change_rate       | string    | Change rate
+position_size     | string    | position
+fair_px           | string    | fair price
+amount24          | string    | 24H trade volume
+base_coin_qty     | string    | trade volume on base coin BTCUSDT mean trade volume on BTC
+quote_coin_qty    | string    | trade volume on quote coin BTCUSDT mean trade volume on USDT
+timestamp         | number    | timestamp exp. 1534315695
+next_funding_rate | string    |
+next_funding_at   | string    |
+
+#### Return to example:
+
+```python
+{
+    "errno": "OK",
+    "message": "Success",
+    "data": {
+        "tickers": [
+            {
+                "symbol": "LTC/USDT",
+                "last_px": "42.78",
+                "open": "42.52",
+                "close": "42.78",
+                "low": "41.31",
+                "high": "42.97",
+                "avg_px": "42.3160293465642988",
+                "last_qty": "11590",
+                "qty24": "180609416",
+                "timestamp": 1589377218,
+                "change_rate": "0.0061147695202258",
+                "change_value": "0.26",
+                "qty_day": "165679224",
+                "amount24": "76460525.17519999992197995",
+                "instrument_id": 10,
+                "position_size": "345121",
+                "base_coin_qty": "1806094.16",
+                "quote_coin_qty": "76426733.477218396127175008",
+                "pps": "89098",
+                "index_px": "42.786666666666",
+                "fair_px": "42.802536113866",
+                "depth_px": {
+                    "bid_px": "42.76",
+                    "ask_px": "42.8",
+                    "mid_px": "42.7825"
+                },
+                "fair_basis": "0",
+                "fair_value": "0",
+                "madb": "0.0158694472",
+                "rate": {
+                    "quote_rate": "0.0006",
+                    "base_rate": "0.0003",
+                    "interest_rate": "0.000099999999"
+                },
+                "premium_index": "-0.000003855618",
+                "funding_rate": "0.000093526743",
+                "next_funding_at": "2020-05-13T16:00:00Z"
+            },
+            {
+                "last_px": "188.29",
+                "open": "187.47",
+                "close": "188.29",
+                "low": "184",
+                "high": "190.76",
+                "avg_px": "187.7633920084560113",
+                "last_qty": "4000",
+                "qty24": "194194490",
+                "timestamp": 1589377221,
+                "change_rate": "0.0043740331786419",
+                "change_value": "0.82",
+                "qty_day": "179246664",
+                "amount24": "36459911.6556200000053700714",
+                "symbol": "BSV/USDT",
+                "instrument_id": 9,
+                "position_size": "685623",
+                "base_coin_qty": "194194.49",
+                "quote_coin_qty": "36462616.151752190801837737",
+                "pps": "96563",
+                "index_px": "188.337277777777",
+                "fair_px": "188.331303030303",
+                "depth_px": {
+                    "bid_px": "188.17",
+                    "ask_px": "188.47",
+                    "mid_px": "188.345"
+                },
+                "fair_basis": "0",
+                "fair_value": "0",
+                "madb": "-0.005974747474",
+                "rate": {
+                    "quote_rate": "0.0006",
+                    "base_rate": "0.0003",
+                    "interest_rate": "0.000099999999"
+                },
+                "premium_index": "0.000099916176",
+                "funding_rate": "0.000099916176",
+                "next_funding_at": "2020-05-13T16:00:00Z"
+            },
+            ...
+        ]
     }
 }
 ```
