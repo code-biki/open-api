@@ -44,7 +44,9 @@ English | [简体中文](./README.md)
   - [**URL Access**](#contract-url-access)
   - [**Get Contract List**](#get-contract-list)
   - [**Get Contract Tickers**](#get-contract-tickers)
-  - [**Get Contract Trades**](#get-contract-get_trades)
+  - [**Get Contract Trades**](#get-contract-trades)
+  - [**Get Contract Order Book**](#get-contract-order-book)
+  - [**Get Contract Market Data**](#get-contract-market-data)
 
 ## Getting Started Guide
 
@@ -1248,16 +1250,17 @@ sign        | true      | string    | Signature
 #### Return Parameters:
 
 Parameters    | Data Typ | Description
-------------- | -------- | ------------------------------
+------------- | -------- | ---------------------------------------------
 errno         | string   |
 message       | string   |
 instrument_id | number   | instrument id
 symbol        | string   | symbol
-face_value    | string   | face value Exp. 0.0001BTC/Unit
+face_value    | string   | face value eg. BTCUSDT 0.0001BTC BTCUSD 1USDT
 min_leverage  | string   | min leverage
 max_leverage  | string   | max leverage
-px_unit       | string   | price unit
-qty_unit      | string   | quantity unit
+px_unit       | string   | Order price accuracy
+qty_unit      | string   | Order quantity accuracy
+margin_coin   | string   | Settlement currency
 
 #### Return to example::
 
@@ -1313,12 +1316,12 @@ close             | string    | close price
 low               | string    | 24H Low
 change_value      | string    | change_value
 change_rate       | string    | Change rate
-position_size     | string    | position
+position_size     | string    | Total open Stringerest
 fair_px           | string    | fair price
 amount24          | string    | 24H trade volume
 base_coin_qty     | string    | trade volume on base coin BTCUSDT mean trade volume on BTC
 quote_coin_qty    | string    | trade volume on quote coin BTCUSDT mean trade volume on USDT
-timestamp         | number    | timestamp exp. 1534315695
+timestamp         | number    | timestamp eg. 1534315695
 next_funding_rate | string    |
 next_funding_at   | string    |
 
@@ -1471,6 +1474,109 @@ side          | string    | 1~4 buyer as taker 5~8 seller as taker
             }
         ]
     }
+}
+```
+
+### Get Contract Order book
+
+#### GET [/swap/depth](https://coapi.biki.cc/swap/depth?instrumentID=1&count=10)
+
+#### Entry Parameters:
+
+Parameters    | Data Type | Description
+------------- | --------- | -------------
+instrument_id | number    | instrument_id
+count         | number    | count
+
+#### Return to example:
+
+```python
+{
+    "errno": "OK",
+    "message": "Success",
+    "data": {
+        "asks": [
+            [
+                911400,
+                "9114",   # price
+                "134716", # contract size at the price
+                0
+            ],
+            [
+                911430,
+                "9114.3",
+                "36647",
+                0
+            ]
+        ],
+        "bids": [
+            [
+                911350,
+                "9113.5",
+                "41906",
+                0
+            ],
+            [
+                911340,
+                "9113.4",
+                "33348",
+                0
+            ]
+        ]
+    }
+}
+```
+
+### Get Contract Market Data
+
+#### GET [/swap/kline](https://coapi.biki.com/swap/kline?instrumentID=1&startTime=1583300827&endTime=1583325827656&unit=5&resolution=M)
+
+#### Entry Parameters:
+
+Parameters    | Data Type | Description
+------------- | --------- | ----------------------
+instrument_id | number    | instrument_id
+startDate     | number    | startDate
+endDate       | number    | endDate
+unit          | number    | granularity
+resolution    | number    | granularity Unit M/H/D
+
+#### Return to example:
+
+```python
+{
+    "errno": "OK",
+    "message": "Success",
+    "data": [
+        {
+            "low": "6822.8",
+            "high": "6911.7",
+            "open": "6911.5",
+            "close": "6835.9",
+            "last_px": "6835.9",
+            "avg_px": "6863.2959679229457036",
+            "qty": "769480",
+            "timestamp": 1586736001,
+            "change_rate": "-0.0109382912537076",
+            "change_value": "-75.6",
+            "base_coin_qty": "76.948",
+            "quote_coin_qty": "528116.898139734826"
+        },
+        {
+            "low": "6835.6",
+            "high": "6862.7",
+            "open": "6835.9",
+            "close": "6862.6",
+            "last_px": "6862.6",
+            "avg_px": "6850.140409757800756",
+            "qty": "728032",
+            "timestamp": 1586736301,
+            "change_rate": "0.0039058499978057",
+            "change_value": "26.7",
+            "base_coin_qty": "72.8032",
+            "quote_coin_qty": "498712.14227967912"
+        }
+    ]
 }
 ```
 
