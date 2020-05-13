@@ -9,7 +9,7 @@ English | [简体中文](./README.md)
   - [**The Server**](#The-Server)
   - [**Contact Us**](#Contact-Us)
 
-- [**SPOT REST API**](#rest-api)
+- [**Spot REST API**](#rest-api)
 
   - [**URL Access**](#URL-Access)
   - [**Request**](#Request)
@@ -31,7 +31,7 @@ English | [简体中文](./README.md)
   - [**Cancel All Orders**](#Cancel-All-Orders)
   - [**Batch creating & cancel orders**](#Batch-creating-and-cancel-orders)
 
-- [**SPOT Websocket API**](#websocket-api)
+- [**Spot Websocket API**](#websocket-api)
 
   - [**URL Access**](#host-url)
   - [**Request**](#Request)
