@@ -44,6 +44,7 @@ English | [简体中文](./README.md)
   - [**URL Access**](#contract-url-access)
   - [**Get Contract List**](#get-contract-list)
   - [**Get Contract Tickers**](#get-contract-tickers)
+  - [**Get Contract Trades**](#get-contract-get_trades)
 
 ## Getting Started Guide
 
@@ -1303,7 +1304,7 @@ qty_unit      | string   | quantity unit
 
 Parameters        | Data Type | Description
 ----------------- | --------- | ------------------------------------------------------------
-instrument_id     | string    | instrument_id
+instrument_id     | number    | instrument_id
 symbol            | string    | symbol
 last_px           | string    | last price
 open              | string    | open price
@@ -1408,6 +1409,66 @@ next_funding_at   | string    |
                 "next_funding_at": "2020-05-13T16:00:00Z"
             },
             ...
+        ]
+    }
+}
+```
+
+### Get Contract Trades
+
+#### GET [/swap/trades](https://coapi.biki.com/swap/trades?instrumentID=1)
+
+#### Entry Parameters:
+
+Parameters    | Data Type | Description
+------------- | --------- | -------------
+instrument_id | number    | instrument_id
+
+#### Return Parameters:
+
+Parameters    | Data Type | Description
+------------- | --------- | --------------------------------------
+instrument_id | string    | instrument_id
+oid           | string    | taker order id
+tid           | string    | trade id
+px            | string    | trade price
+qty           | string    | trade quantity
+make_fee      | string    | make_fee
+take_fee      | string    | take_fee
+side          | string    | 1~4 buyer as taker 5~8 seller as taker
+
+#### Return to example:
+
+```python
+{
+    "errno": "OK",
+    "message": "Success",
+    "data": {
+        "trades": [
+            {
+                "tid": 2119605783,
+                "oid": 2119605772,
+                "instrument_id": 1,
+                "px": "9128",
+                "qty": "3900",
+                "make_fee": "-1.423968",
+                "take_fee": "2.135952",
+                "created_at": "2020-05-13T14:17:37.524095113Z",
+                "side": 4,
+                "change": "0"
+            },
+            {
+                "tid": 2119603181,
+                "oid": 2119603178,
+                "instrument_id": 1,
+                "px": "9130.6",
+                "qty": "2500",
+                "make_fee": "-0.91306",
+                "take_fee": "1.36959",
+                "created_at": "2020-05-13T14:17:31.629972954Z",
+                "side": 5,
+                "change": "0"
+            }
         ]
     }
 }
