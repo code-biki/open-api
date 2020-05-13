@@ -9,7 +9,7 @@ English | [简体中文](./README.md)
   - [**The Server**](#The-Server)
   - [**Contact Us**](#Contact-Us)
 
-- [**REST API**](#rest-api)
+- [**SPOT REST API**](#rest-api)
 
   - [**URL Access**](#URL-Access)
   - [**Request**](#Request)
@@ -31,13 +31,19 @@ English | [简体中文](./README.md)
   - [**Cancel All Orders**](#Cancel-All-Orders)
   - [**Batch creating & cancel orders**](#Batch-creating-and-cancel-orders)
 
-- [**Websocket API**](#websocket-api)
+- [**SPOT Websocket API**](#websocket-api)
 
   - [**URL Access**](#host-url)
   - [**Request**](#Request)
   - [**Subscribe for Real-Time Trade Information**](#Subscribe-for-Real-Time-Trade-Information)
   - [**Subscribe for order book**](#Subscribe-for-order-book)
   - [**Subscribe for Klines Data**](#Subscribe-for-Klines-Data)
+
+- [**Contract REST API**](#contract-rest-api)
+
+  - [**URL Access**](#contract-url-access)
+  - [**Get Contract List**](#get-contract-list)
+  - [**Get Contract Tickers**](#get-contract-tickers)
 
 ## Getting Started Guide
 
@@ -1226,7 +1232,7 @@ sign        | true      | string    | Signature
 
 ## Contract REST API
 
-### URL Access
+### Contract URL Access
 
 - **<https://coapi.biki.com> [Recommend]**
 
@@ -1287,7 +1293,7 @@ qty_unit      | string   | quantity unit
 }
 ```
 
-### Get All Tickers
+### Get Contract Tickers
 
 #### GET [/swap/tickers](https://coapi.biki.cc/swap/tickers)
 
