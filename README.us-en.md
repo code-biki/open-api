@@ -54,7 +54,7 @@ English | [简体中文](./README.md)
 
 ### Creating API Key
 
-After the user register an account on **[BiKi](https://www.biki.com)**，they have to proceed to **[[User Center](https://www.biki.com/personal/userManagement)] - [[API Management](https://www.biki.com/personal/apiManagement)]** to create an API key. After complete creating API key, the system will automatically generate a random API Key and Secret Key which can be used to perform programmed transactions. Each account can create a maximum of 5 API Key.
+After the user register an account on **[BiKi](https://www.biki.cc)**，they have to proceed to **[[User Center](https://www.biki.cc/personal/userManagement)] - [[API Management](https://www.biki.cc/personal/apiManagement)]** to create an API key. After complete creating API key, the system will automatically generate a random API Key and Secret Key which can be used to perform programmed transactions. Each account can create a maximum of 5 API Key.
 
 > **Please do not disclose information about API Key and Secret Key to any other person and to protect loss of funds, it is highly recommended that users bind IP address to API Key. Each API Key can bind a maximum of 5 IP addresses. Please use comma to separate the IP address if binding more than 1 IP address.**
 
@@ -80,9 +80,9 @@ BiKi.com server is based in Tokyo and to minimize delays on API access, we recom
 
 ### URL Access
 
-- **[https://openapi.biki.com](https://www.biki.com) [Recommend]**
+- **[https://openapi.biki.cc](https://www.biki.cc) [Recommend]**
 
-- **[https://openapi.biki.cc](https://www.biki.cc)**
+- **[https://openapi.biki.com](https://www.biki.com)**
 
 ### Request
 
@@ -168,7 +168,7 @@ API requests may likely be altered during network transmission and to ensure API
 
 - The final API request to be sent to the Server will be:
 
-  - <https://openapi.biki.com/open/api/user/account?api_key=0816016bb06417f50327e2b557d39aaa&time=156200607&sign=5fcf02e226a4bb2fb180be2aaa6fe541>
+  - <https://openapi.biki.cc/open/api/user/account?api_key=0816016bb06417f50327e2b557d39aaa&time=156200607&sign=5fcf02e226a4bb2fb180be2aaa6fe541>
 
 ### List of Spot REST API
 
@@ -193,7 +193,7 @@ API                                                                | Interface T
 
 ### Get Spot Symbols List
 
-#### GET [/open/api/common/symbols](https://openapi.biki.com/open/api/common/symbols)
+#### GET [/open/api/common/symbols](https://openapi.biki.cc/open/api/common/symbols)
 
 #### Entry Parameters: No
 
@@ -236,7 +236,7 @@ price_precision  | number   | Price precision (0 is a number)
 
 ### Get All Spot Tickers
 
-#### GET [/open/api/get_allticker](https://openapi.biki.com/open/api/get_allticker)
+#### GET [/open/api/get_allticker](https://openapi.biki.cc/open/api/get_allticker)
 
 #### Entry Parameters: No
 
@@ -305,7 +305,7 @@ rose       | string    | 24H Change rate
 
 ### Get Recent Fills
 
-#### GET [/open/api/market](https://openapi.biki.com/open/api/market)
+#### GET [/open/api/market](https://openapi.biki.cc/open/api/market)
 
 #### Entry Parameters: No
 
@@ -334,7 +334,7 @@ data       | object    | List Recent Fills
 
 ### Get Ticker
 
-#### GET [/open/api/get_ticker](https://openapi.biki.com/open/api/get_ticker?symbol=btcusdt)
+#### GET [/open/api/get_ticker](https://openapi.biki.cc/open/api/get_ticker?symbol=btcusdt)
 
 #### Entry Parameters:
 
@@ -378,7 +378,7 @@ rose       | string    | Change rate
 
 ### Get Trade Histories
 
-#### GET [/open/api/get_trades](https://openapi.biki.com/open/api/get_trades?symbol=btcusdt)
+#### GET [/open/api/get_trades](https://openapi.biki.cc/open/api/get_trades?symbol=btcusdt)
 
 #### Entry Parameters::
 
@@ -415,7 +415,7 @@ data       | object    | Trade Record
 
 ### Get Klines
 
-#### GET [/open/api/get_records](https://openapi.biki.com/open/api/get_records?symbol=btcusdt&period=1)
+#### GET [/open/api/get_records](https://openapi.biki.cc/open/api/get_records?symbol=btcusdt&period=1)
 
 #### Entry Parameters:
 
@@ -477,7 +477,7 @@ data       | object    | Kline Data
 
 ### Get Order Book
 
-#### GET [/open/api/market_dept](https://openapi.biki.com/open/api/market_dept?symbol=btcusdt&type=step0)
+#### GET [/open/api/market_dept](https://openapi.biki.cc/open/api/market_dept?symbol=btcusdt&type=step0)
 
 #### Entry Parameters:
 
@@ -561,7 +561,7 @@ tick       | object    | Order Book
 
 ### Get Account Balances
 
-#### GET [/open/api/user/account](https://openapi.biki.com/open/api/user/account?api_key=0816016bb06417f50327e2b557d39aaa&time=156200607&sign=3cdbe8034f7abf2820fc1bbe721e5692)
+#### GET [/open/api/user/account](https://openapi.biki.cc/open/api/user/account?api_key=0816016bb06417f50327e2b557d39aaa&time=156200607&sign=3cdbe8034f7abf2820fc1bbe721e5692)
 
 #### Example of Signing Request
 
@@ -615,7 +615,7 @@ coin        | string    | Holding Assets
 
 ### Get Order
 
-#### GET [/open/api/v2/new_order](https://openapi.biki.com/open/api/v2/new_order)
+#### GET [/open/api/v2/new_order](https://openapi.biki.cc/open/api/v2/new_order)
 
 #### Example of Signing Request
 
@@ -694,7 +694,7 @@ tradeList     | object    | Return to example:
 
 ### Get All Orders
 
-#### GET [/open/api/v2/all_order](https://openapi.biki.com/open/api/v2/all_order)
+#### GET [/open/api/v2/all_order](https://openapi.biki.cc/open/api/v2/all_order)
 
 #### Example of Signing Request
 
@@ -775,7 +775,7 @@ tradeList     | object    | Trade Record
 
 ### Get Recent Trades
 
-#### GET [/open/api/all_trade](https://openapi.biki.com/open/api/all_trade)
+#### GET [/open/api/all_trade](https://openapi.biki.cc/open/api/all_trade)
 
 #### Example of Signing Request
 
@@ -847,7 +847,7 @@ ctime      | string    | create time
 
 ### Get Order Details
 
-#### GET [/open/api/order_info](https://openapi.biki.com/open/api/order_info)
+#### GET [/open/api/order_info](https://openapi.biki.cc/open/api/order_info)
 
 #### Example of Signing Request
 
@@ -918,7 +918,7 @@ time       | true      | string   | Timestamp    |
 
 ### Creating Order
 
-#### POST [/open/api/create_order](https://openapi.biki.com/open/api/create_order)
+#### POST [/open/api/create_order](https://openapi.biki.cc/open/api/create_order)
 
 #### Example of Signing Request
 
@@ -958,7 +958,7 @@ order_id   | number    | Order ID
 
 ### Cancel Order
 
-#### POST [/open/api/cancel_order](https://openapi.biki.com/open/api/cancel_order)
+#### POST [/open/api/cancel_order](https://openapi.biki.cc/open/api/cancel_order)
 
 #### Example of Signing Request
 
@@ -986,7 +986,7 @@ sign       | true      | string   | Signature    |
 
 ### Cancel All Orders
 
-#### POST [/open/api/cancel_order_all](https://openapi.biki.com/open/api/cancel_order_all)
+#### POST [/open/api/cancel_order_all](https://openapi.biki.cc/open/api/cancel_order_all)
 
 #### Example of Signing Request
 
@@ -1013,7 +1013,7 @@ sign       | true      | string    | Signature    |
 
 ### Batch Creating And Cancel Orders
 
-#### POST [/open/api/mass_replaceV2](https://openapi.biki.com/open/api/mass_replaceV2)
+#### POST [/open/api/mass_replaceV2](https://openapi.biki.cc/open/api/mass_replaceV2)
 
 #### Example of Signing Request
 
@@ -1055,9 +1055,9 @@ sign        | true      | string    | Signature
 
 ### URL Access URL
 
-#### [wss://ws.biki.com/kline-api/ws]((https://www.biki.com)) [Recommend]
+#### [wss://ws.biki.cc/kline-api/ws]((https://www.biki.cc)) [Recommend]
 
-#### [wss://ws.bikicoin.pro/kline-api/ws](https://www.biki.com)
+#### [wss://ws.bikicoin.pro/kline-api/ws](https://www.biki.cc)
 
 ### Connection Request
 
@@ -1237,13 +1237,13 @@ sign        | true      | string    | Signature
 
 ### Contract URL Access
 
-- **<https://coapi.biki.com> [Recommend]**
+- **<https://coapi.biki.cc> [Recommend]**
 
 - **<https://coapi.biki.cc>**
 
 ### Get Contract List
 
-#### GET [/swap/instruments](https://coapi.biki.com/swap/instruments)
+#### GET [/swap/instruments](https://coapi.biki.cc/swap/instruments)
 
 #### Entry Parameters: No
 
@@ -1419,7 +1419,7 @@ next_funding_at   | string    |
 
 ### Get Contract Trades
 
-#### GET [/swap/trades](https://coapi.biki.com/swap/trades?instrumentID=1)
+#### GET [/swap/trades](https://coapi.biki.cc/swap/trades?instrumentID=1)
 
 #### Entry Parameters:
 
@@ -1529,7 +1529,7 @@ count         | number    | count
 
 ### Get Contract Market Data
 
-#### GET [/swap/kline](https://coapi.biki.com/swap/kline?instrumentID=1&startTime=1583300827&endTime=1583325827656&unit=5&resolution=M)
+#### GET [/swap/kline](https://coapi.biki.cc/swap/kline?instrumentID=1&startTime=1583300827&endTime=1583325827656&unit=5&resolution=M)
 
 #### Entry Parameters:
 
