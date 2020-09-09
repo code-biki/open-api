@@ -579,8 +579,6 @@ sign    | true | string | 签名         |
 参数名称        | 数据类型   | 描述
 ----------- | ------ | ---------------------
 code        | string | code=0 成功， code >0 失败
-total_asset | string | 总资产折合BTC价值
-btcValuatin | string | 币种折合BTC价值
 normal      | number | 币种可用余额
 locked      | string | 币种冻结中余额
 coin        | string | 持有币种

@@ -580,8 +580,6 @@ sign       | true      | string    | signature    |
 Parameters  | Data Type | Description
 ----------- | --------- | -------------------------------
 code        | string    | code=0 Success， code >0 Failed
-total_asset | string    | Total assets
-btcValuatin | string    | Total assets in BTC
 normal      | number    | Available Balance
 locked      | string    | Available Balances after Frozen
 coin        | string    | Holding Assets
